@@ -23,7 +23,7 @@ def rank_with_invalid_input_file():
 @pytest.fixture
 def rank_with_valid_output_file():
     """ Returns a Rank instance with valid output file name"""
-    return Rank("input file.txt", "vvvv ")
+    return Rank("input file.txt", "output file.txt")
 
 
 @pytest.fixture
