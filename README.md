@@ -46,4 +46,4 @@ To test you can run one of the following commands:
 
 **pytest test** -> runs the tests inside the **test/** directory
 
-**pytest test/test_rank.py** -> runs the specific that contains the tests
+**pytest test/test_rank.py** -> runs the specific file that contains the tests
