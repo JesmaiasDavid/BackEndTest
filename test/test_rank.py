@@ -3,11 +3,6 @@ import os
 from app.rank import Rank
 
 
-def current_working_directory():
-    """Sets cwd to the root directory"""
-    os.chdir("..")
-
-
 @pytest.fixture
 def rank_with_valid_input_file():
     """ Returns a Rank instance with valid input file name"""
@@ -34,7 +29,6 @@ def rank_with_invalid_output_file():
 
 def test_read_data_from_input_file_success(rank_with_valid_input_file):
     """Test that reading data from a valid file name in the files folder is successful"""
-    current_working_directory()
     rank = rank_with_valid_input_file
     input_file = rank.input_file_name
 
@@ -47,7 +41,6 @@ def test_read_data_from_input_file_success(rank_with_valid_input_file):
 
 def test_read_data_from_input_file_not_in_files_folder(rank_with_invalid_input_file):
     """Test that reading data from a file not in the files folder fails"""
-    current_working_directory()
     rank = rank_with_invalid_input_file
     input_file = rank.input_file_name
 
@@ -61,7 +54,6 @@ def test_read_data_from_input_file_not_in_files_folder(rank_with_invalid_input_f
 
 def test_write_data_to_output_file_success(rank_with_valid_output_file):
     """Test that writing data to a valid file is successful"""
-    current_working_directory()
     rank = rank_with_valid_output_file
     output_file = rank.output_file_name
 
@@ -74,7 +66,6 @@ def test_write_data_to_output_file_success(rank_with_valid_output_file):
 
 def test_write_data_to_output_file_with_wrong_extension(rank_with_invalid_output_file):
     """Test that reading data from a invalid file name is unsuccessful"""
-    current_working_directory()
     rank = rank_with_invalid_output_file
     output_file = rank.output_file_name
 

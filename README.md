@@ -39,3 +39,11 @@ pass any name.
 **python main.py rank --output myoutput.txt --input myinput.txt**
 
 **python main.py -h**
+
+### Testing
+
+To test you can run the one of the following commands:
+
+**pytest test** -> runs the tests inside the **test/** directory
+
+**pytest test/test_rank.py** -> runs the specific that contains the tests
