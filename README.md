@@ -42,7 +42,7 @@ pass any name.
 
 ### Testing
 
-To test you can run the one of the following commands:
+To test you can run one of the following commands:
 
 **pytest test** -> runs the tests inside the **test/** directory
 
