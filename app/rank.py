@@ -119,7 +119,7 @@ class Rank:
         previous_point = None
 
         rank_sorted = sorted(self.teams.items(), key=lambda x: x[1], reverse=True)  # sort by points
-        for i in range(len(rank_sorted)):  # bubble sort
+        for i in range(len(rank_sorted)):
             for j in range(len(rank_sorted) - i - 1):
                 if rank_sorted[j][1] == rank_sorted[j + 1][1]: # checks if teams have the same ranking
                     if rank_sorted[j][0] > rank_sorted[j + 1][0]:
